@@ -7,4 +7,6 @@ urlpatterns = [
     #views.home refers to the function we made in views
     #name="home" shows how we can refer to it later
     path("", views.home, name="home")
+    #they will store the link as an integer pk
+    path("<int:pk>", views.detail, name = "detail")
 ]

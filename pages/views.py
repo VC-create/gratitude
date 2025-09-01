@@ -18,3 +18,14 @@ def home(request):
     #render returns all the info given to the web browser - html, css, etc
     return render(request, "home.html", context)
 
+#pk means primary key, to only run the function with the pk in the url
+def detail(request, pk):
+    #get one specific post
+    #pk=pk means that the pk of the post is the pk that we're looking for
+    this_post = Post.objects.get(pk=pk)
+    context = {
+        "posts": this_post
+    }
+    return render(request, "detail.html", context)
+
+

@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <hl>Hello World</hl>
-    <!--we need to access context-->
-    <!--to add logic here, we're using the % signs - it's just syntax that Django uses to put logic in the HTML page-->
+{% extends base.html %}
+
+{% block content %}
+
     {% for post in posts %}
-        {{post.title}}
+        <!--you pass the unique link with the pk so that you can click on the post to see the content in the detail page, you go to that speciifc page for that post-->
+        <a href = "{% url 'detail' post.pk %}">{{post.title}}</a>
         {{post.date}}
     {% endfor %}
-    <script src="index.js"></script>
-  </body>
-</html>
+
+{% endblock %}
