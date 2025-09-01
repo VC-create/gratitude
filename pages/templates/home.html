@@ -9,6 +9,12 @@
   </head>
   <body>
     <hl>Hello World</hl>
+    <!--we need to access context-->
+    <!--to add logic here, we're using the % signs - it's just syntax that Django uses to put logic in the HTML page-->
+    {% for post in posts %}
+        {{post.title}}
+        {{post.date}}
+    {% endfor %}
     <script src="index.js"></script>
   </body>
 </html>
