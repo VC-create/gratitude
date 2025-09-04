@@ -7,7 +7,16 @@
         you go to that speciifc page for that post-->
         <!--go to the wesbite url called detail and pass the pk to it to get the specific unique post-->
         <a href = "{% url 'detail' post.pk %}">{{post.title}}</a>
-        {{post.date}}
+        <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{post.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary"> {{post.date}}</h6>
+    <a href = "{% url 'detail' post.pk %}" class="card-link">Read Post</a>
+  </div>
+</div>
+
+
+
     {% endfor %}
 
 {% endblock %}
