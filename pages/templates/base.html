@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vedika's Blog</title>
+    <!--the next line brings in bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Hello World</h1>
+    <hr>
+    <!--to go back to home page, use home because in the urls.py, you defined the path to be just homes-->
+    <a href = "{% url 'home' %}"><h1 class = "text-center text-primary">Vedika's Blog</h1></a>
+    <hr>
 
+    <div class = "container">
     {% block content %}
     <!--this is where all our code goes-->
     {% endblock %}
+    </div>
 
     <script src="index.js"></script>
   </body>
