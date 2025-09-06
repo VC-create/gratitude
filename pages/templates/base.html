@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlPage" data-bs-theme="light">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +12,14 @@
   <body>
     <hr>
     <!--to go back to home page, use home because in the urls.py, you defined the path to be just homes-->
-    <a href = "{% url 'home' %}"><h1 class = "text-center text-primary">Vedika's Blog</h1></a>
+    <a href = "{% url 'home' %}"><h1 class = "text-center text-primary" style = "text-decoration none">Vedika's Blog</h1></a>
     <hr>
+
+    <div class="d-flex justify-content-center">
+      <input type="checkbox" id="checkbox">
+      <label style="margin-right:5px" for="mycheckbox">Dark Mode</label>
+    </div>
+    <br>
 
     <div class = "container">
     {% block content %}
@@ -21,6 +27,20 @@
     {% endblock %}
     </div>
 
-    <script src="index.js"></script>
+    <script>
+      page = document.getElementById("htmlPage");
+      checkbox = document.getElementById("checkbox");
+
+      checkbox.addEventListener("change", enableDarkMode);
+
+      function enableDarkMode(){
+          if(checkbox.checked){
+              page.setAttribute("data-bs-theme", "dark");
+          }
+          else{
+              page.setAttribute("data-bs-theme", "light");
+          }
+      }
+    </script>
   </body>
 </html>
