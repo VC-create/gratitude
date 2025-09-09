@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+#need to import this for paths - to link style.css
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -119,6 +121,11 @@ USE_TZ = True
 #add a backslash
 STATIC_URL = "/static/"
 STATIC_ROOT = "/home/VCCreate/gratitude/static"
+
+#this tells Django that the css file is in pages/static, necessary so it can load the css file on the page
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'pages/static'),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
