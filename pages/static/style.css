@@ -1,5 +1,46 @@
 
-body{
-    background-color:yellow;
+:root{
+    --summer:lightblue;
+    --fall:peachpuff;
+    --winter:whitesmoke;
+    --spring:lightpink;
+}
 
+body{
+    font-family:monaco;
+}
+
+/*the theme switcher stuff is in the header*/
+header{
+    text-align:center;
+    font-size:30px;
+    padding:20px;
+}
+
+/*use . for classes and # for ids*/
+.theme-switches{
+    display:flex;
+    justify-content: center;
+}
+
+/*this is what styles those boxes on the screen*/
+.switch{
+    height:30px;
+    width:30px;
+    border:1px solid black;
+    margin:15px;
+    cursor:pointer;
+}
+
+#theme1{
+    background-color: var(--summer);
+}
+#theme2{
+    background-color: var(--fall);
+}
+#theme3{
+    background-color: var(--winter);
+}
+#theme4{
+    background-color: var(--spring);
 }

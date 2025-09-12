@@ -9,8 +9,10 @@
     <!--the next line brings in bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!--putting it after the bootstrap line will make the css file override the bootstrap-->
+    <!--this next stylesheet is the sylesheet we switch to-->
+    <link rel="stylesheet" id="switcher-id" href="">
     <link rel="stylesheet" href="{% static 'style.css' %}">
-
+    <script src="{% static 'script.js' %}" defer></script>
   </head>
 
   <body>
@@ -18,6 +20,15 @@
     <!--to go back to home page, use home because in the urls.py, you defined the path to be just homes-->
     <a href = "{% url 'home' %}" class="link-underline link-underline-opacity-0"><h1 class = "text-center text-success">Vedika's Blog</h1></a>
     <hr>
+  
+    <header>
+      <div class="theme-switches">
+        <div data-theme="summer" class="switch" id="theme1"></div>
+        <div data-theme="fall" class="switch" id="theme2"></div>
+        <div data-theme="winter" class="switch" id="theme3"></div>
+        <div data-theme="spring" class="switch" id="theme4"></div>
+      </div>
+    </header>
 
     <div class = "container">
     {% block content %}
@@ -25,10 +36,6 @@
     <!--all the posts are loaded here, the stuff in home.html-->
     {% endblock %}
     </div>
-
-    <script>
-      
-    </script>
 
   </body>
 </html>
