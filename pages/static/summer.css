@@ -1,4 +1,4 @@
-html,body{
+body{
     font-family:monaco;
     margin: 0;
     padding: 0;
@@ -10,7 +10,6 @@ html,body{
 header{
     text-align:center;
     font-size:30px;
-    padding:20px;
 }
 
 .container1{
@@ -22,6 +21,7 @@ header{
     background-size: 100% 100%;
     /*overflow hidden prevents scrolling so image covers whole page*/
     overflow:hidden;
+    /*use this for the sun rays - https://www.pngkey.com/png/full/2-23864_transparent-sun-ray-ray-of-sunshine-png.png*/
 }
 
 .cloud{
@@ -32,7 +32,7 @@ header{
     background:url(https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Cloud-PNG/Fluffy_Cloud_Large_Transparent_Image.png?m=1629830703);
     animation:animate 120s linear infinite;
     background-size: 100% auto;
-    padding:30px;
+    padding:20px;
 }
 
 @keyframes animate{

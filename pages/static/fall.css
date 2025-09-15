@@ -1,3 +1,41 @@
 body{
-    background-color:peachpuff;
+    font-family:monaco;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
 }
+
+/*the theme switcher stuff is in the header*/
+header{
+    text-align:center;
+    font-size:30px;
+}
+
+.container1{
+    position:absolute;
+    width:100%;
+    height:100%;
+    /*image for free from vecteezy*/
+    background:url(https://media.istockphoto.com/id/1176602671/photo/falling-autumn-leaves-before-sunset.webp?b=1&s=612x612&w=0&k=20&c=nXlYtEapVrWa6IEbaVeLQQPD9bAxhcKChw2hLQOCNRk=);
+    background-size: 100% 100%;
+    /*overflow hidden prevents scrolling so image covers whole page*/
+    overflow:hidden;
+}
+
+/*.cloud{
+    position:absolute;
+    width:100%;
+    height:100%;
+    /*image for free from yopriceville gallery
+    background:url(https://static.vecteezy.com/system/resources/previews/026/775/199/non_2x/watercolor-autumn-leaf-ai-generative-free-png.png);
+    animation:animate 120s linear infinite;
+    background-size: 100% auto;
+    padding:30px;
+}
+
+@keyframes animate{
+    0%{background-position:0px;}
+   100%{background-position:8000px;}
+}*/
+
