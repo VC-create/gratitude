@@ -23,7 +23,18 @@ header{
     overflow:hidden;
     /*use this for the sun rays from png key for free - 
     https://www.pngkey.com/png/full/2-23864_transparent-sun-ray-ray-of-sunshine-png.png*/
+    /*can do same animation thing like maybe move the rays side to side, or try to make it move at an angle*/
 }
+
+.sunray{
+    background:url(https://www.pngkey.com/png/full/2-23864_transparent-sun-ray-ray-of-sunshine-png.png);
+    animation: spin 3s linear infinite;
+}
+@keyframes spin{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
 
 .cloud{
     position:absolute;

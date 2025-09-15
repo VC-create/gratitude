@@ -21,7 +21,9 @@
     <hr>
   
     <header>
+      <div class="sunray">
       <div>
+        </div>
         <button onclick="toggleTheme('summer.css')">Summer</button>
         <button onclick="toggleTheme('fall.css')">Fall</button>
         <button onclick="toggleTheme('winter.css')">Winter</button>
@@ -29,7 +31,8 @@
       </div>
     </header>
 
-    <div class="cloud">
+    
+      <div class="cloud">
       <div class = "container">
     {% block content %}
     <!--this is where all our code goes-->
@@ -37,8 +40,8 @@
     {% endblock %}
       </div>
     </div>
-    
   </div>
+
 
   </body>
 </html>
