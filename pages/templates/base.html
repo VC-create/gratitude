@@ -14,6 +14,7 @@
   </head>
 
   <body>
+    <div class="container1">
     <hr>
     <!--to go back to home page, use home because in the urls.py, you defined the path to be just homes-->
     <a href = "{% url 'home' %}" class="link-underline link-underline-opacity-0"><h1 class = "text-center text-success">Vedika's Blog</h1></a>
@@ -28,12 +29,16 @@
       </div>
     </header>
 
-    <div class = "container">
+    <div class="cloud">
+      <div class = "container">
     {% block content %}
     <!--this is where all our code goes-->
     <!--all the posts are loaded here, the stuff in home.html-->
     {% endblock %}
+      </div>
     </div>
+    
+  </div>
 
   </body>
 </html>
