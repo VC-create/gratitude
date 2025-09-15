@@ -21,7 +21,8 @@ header{
     background-size: 100% 100%;
     /*overflow hidden prevents scrolling so image covers whole page*/
     overflow:hidden;
-    /*use this for the sun rays - https://www.pngkey.com/png/full/2-23864_transparent-sun-ray-ray-of-sunshine-png.png*/
+    /*use this for the sun rays from png key for free - 
+    https://www.pngkey.com/png/full/2-23864_transparent-sun-ray-ray-of-sunshine-png.png*/
 }
 
 .cloud{
