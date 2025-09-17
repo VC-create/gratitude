@@ -1,49 +1,155 @@
-body{
-    font-family:monaco;
+body {
+    font-family: monaco;
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100%;
-    color:black; 
+    color: black;
 }
 
-/*the theme switcher stuff is in the header*/
-header{
-    text-align:center;
-    font-size:30px;
+header {
+    text-align: center;
+    font-size: 30px;
+    padding:20px;
 }
 
-.container1{
-    position:absolute;
-    width:100%;
-    height:100%;
-    /*image for free from istock*/
-    background:url(https://media.istockphoto.com/id/1616269561/vector/autumn-leaf-background.jpg?s=612x612&w=0&k=20&c=lJWl6QxCcKvyNmrjVcp7GWelM7m4QnI2J5mTrnyG2Yg=);
+/*the z-index just places it at the very bottom so it'll be under the leaves, otherwise everything is the same as summer*/
+/*the absolute makes it so it doesn't interfere with the leaves or blog posts?*/
+.container1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(https://media.istockphoto.com/id/1616269561/vector/autumn-leaf-background.jpg?s=612x612&w=0&k=20&c=lJWl6QxCcKvyNmrjVcp7GWelM7m4QnI2J5mTrnyG2Yg=);
     background-size: 100% 100%;
-    /*overflow hidden prevents scrolling so image covers whole page*/
-    overflow:hidden;
+    overflow: hidden;
+    z-index: 1; 
 }
 
-section{
-
+/*the width ensures it takes up all of container1's width as well, the relative makes cloud a reference for all the divs inside it
+the leaves position themselves relative to cloud and not any other element
+relative position still makes it part of normal flow, only the position absolute is out of the normal flow - ex:the leaves*/
+.cloud {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.leaf1{
-    background:url(https://www.pngkey.com/png/full/930-9306416_autumn-leaves-clipart-chinar-autumn-maple-leaf-png.png);
+/*the leaf animations are on top of the background, z index 2 - higher index = on top of lower index
+the absolute position makes them posiiton relative to their closest ancestor, the cloud, ensuring they can move freely in it
+it takes them out of the regular document flow so it doesn't affect the layout of other elements
+the background size contain makes them fit the whole div without distortion
+no repeat makes sures the image only appears once and not many times if it doesn't fit the div
+the centering places the image of the leaf in the middle of the div - not really needed?*/
+.leaf1, .leaf2, .leaf3, .leaf4 {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;  
 }
 
-.leaf2{
-    background:url(https://assets.simpleviewinc.com/simpleview/image/upload/c_mpad,q_75,w_297/v1/clients/newyorkstate/hornbeam_da192ef6-6ce2-428f-88ae-30afc9cccdeb.png);
-}
-.leaf3{
-    background:url(https://png.pngtree.com/png-clipart/20210905/original/pngtree-autumn-falling-leaves-fall-png-image_6695950.jpg);
-}
-.leaf4{
-    background:url(https://dejpknyizje2n.cloudfront.net/media/carstickers/versions/fall-leaves-autumn-season-watercolor-illustration-sticker-u1e1f-x450.png);
+
+.leaf1 {
+    top: 10%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    background-image: url(https://www.pngkey.com/png/full/930-9306416_autumn-leaves-clipart-chinar-autumn-maple-leaf-png.png);
+    animation: animateLeaf1 15s linear infinite;
 }
 
-@keyframes animate{
-    0%{background-position:0px;}
-   100%{background-position:8000px;}
+/* Leaf 2 */
+.leaf2 {
+    top: 30%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-image: url(https://assets.simpleviewinc.com/simpleview/image/upload/c_mpad,q_75,w_297/v1/clients/newyorkstate/hornbeam_da192ef6-6ce2-428f-88ae-30afc9cccdeb.png);
+    animation: animateLeaf2 20s linear infinite;
 }
 
+/* Leaf 3 */
+.leaf3 {
+    top: 50%;
+    left: 70%;
+    width: 120px;
+    height: 120px;
+    background-image: url(https://png.pngtree.com/png-clipart/20210905/original/pngtree-autumn-falling-leaves-fall-png-image_6695950.jpg);
+    animation: animateLeaf3 18s linear infinite;
+}
+
+/* Leaf 4 */
+.leaf4 {
+    top: 20%;
+    left: 0%;
+    width: 100px;
+    height: 100px;
+    background-image: url(https://dejpknyizje2n.cloudfront.net/media/carstickers/versions/fall-leaves-autumn-season-watercolor-illustration-sticker-u1e1f-x450.png);
+    animation: animateLeaf4 12s linear infinite;
+}
+
+/* each leaf animated seperately, opacity from 0 to 1(fully visible)*/
+/*animating each leaf separetely doesn't affect the background and the blog posts which are in container1 and container respecitively*/
+@keyframes animateLeaf1 {
+    0% {
+        opacity: 0.2;
+        top: -10%;
+        transform: translateX(20px) rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        top: 110%;
+        transform: translateX(-20px) rotate(180deg);
+    }
+}
+
+@keyframes animateLeaf2 {
+    0% {
+        opacity: 0.2;
+        top: -10%;
+        transform: translateX(30px) rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        top: 110%;
+        transform: translateX(-30px) rotate(180deg);
+    }
+}
+
+@keyframes animateLeaf3 {
+    0% {
+        opacity: 0.2;
+        top: -10%;
+        transform: translateX(40px) rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        top: 110%;
+        transform: translateX(-40px) rotate(180deg);
+    }
+}
+
+@keyframes animateLeaf4 {
+    0% {
+        opacity: 0.2;
+        top: -10%;
+        transform: translateX(50px) rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        top: 110%;
+        transform: translateX(-50px) rotate(180deg);
+    }
+}
+
+/*blog content above leaves, z index 3*/
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+    z-index: 3; 
+    /*overflow: auto;*/
+}

@@ -11,6 +11,7 @@ body{
 header{
     text-align:center;
     font-size:30px;
+    padding:20px;
 }
 
 .container1{
@@ -27,7 +28,7 @@ header{
     /*can do same animation thing like maybe move the rays side to side, or try to make it move at an angle*/
 }
 
-.sunray{
+/*.sunray{
     background:url(https://www.pngkey.com/png/full/2-23864_transparent-sun-ray-ray-of-sunshine-png.png);
     animation: spin 3s linear infinite;
     position:absolute;
@@ -35,7 +36,7 @@ header{
 @keyframes spin{
     from{transform:rotate(0deg);}
     to{transform:rotate(360deg);}
-}
+}*/
 
 
 .cloud{
@@ -46,7 +47,6 @@ header{
     background:url(https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Cloud-PNG/Fluffy_Cloud_Large_Transparent_Image.png?m=1629830703);
     animation:animate 120s linear infinite;
     background-size: 100% auto;
-    padding:20px;
 }
 
 @keyframes animate{
