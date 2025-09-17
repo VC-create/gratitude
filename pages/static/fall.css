@@ -4,6 +4,7 @@ body{
     padding: 0;
     height: 100vh;
     width: 100%;
+    color:black; 
 }
 
 /*the theme switcher stuff is in the header*/
@@ -16,26 +17,33 @@ header{
     position:absolute;
     width:100%;
     height:100%;
-    /*image for free from vecteezy*/
-    background:url(https://media.istockphoto.com/id/1176602671/photo/falling-autumn-leaves-before-sunset.webp?b=1&s=612x612&w=0&k=20&c=nXlYtEapVrWa6IEbaVeLQQPD9bAxhcKChw2hLQOCNRk=);
+    /*image for free from istock*/
+    background:url(https://media.istockphoto.com/id/1616269561/vector/autumn-leaf-background.jpg?s=612x612&w=0&k=20&c=lJWl6QxCcKvyNmrjVcp7GWelM7m4QnI2J5mTrnyG2Yg=);
     background-size: 100% 100%;
     /*overflow hidden prevents scrolling so image covers whole page*/
     overflow:hidden;
 }
 
-/*.cloud{
-    position:absolute;
-    width:100%;
-    height:100%;
-    /*image for free from yopriceville gallery
-    background:url(https://static.vecteezy.com/system/resources/previews/026/775/199/non_2x/watercolor-autumn-leaf-ai-generative-free-png.png);
-    animation:animate 120s linear infinite;
-    background-size: 100% auto;
-    padding:30px;
+section{
+
+}
+
+.leaf1{
+    background:url(https://www.pngkey.com/png/full/930-9306416_autumn-leaves-clipart-chinar-autumn-maple-leaf-png.png);
+}
+
+.leaf2{
+    background:url(https://assets.simpleviewinc.com/simpleview/image/upload/c_mpad,q_75,w_297/v1/clients/newyorkstate/hornbeam_da192ef6-6ce2-428f-88ae-30afc9cccdeb.png);
+}
+.leaf3{
+    background:url(https://png.pngtree.com/png-clipart/20210905/original/pngtree-autumn-falling-leaves-fall-png-image_6695950.jpg);
+}
+.leaf4{
+    background:url(https://dejpknyizje2n.cloudfront.net/media/carstickers/versions/fall-leaves-autumn-season-watercolor-illustration-sticker-u1e1f-x450.png);
 }
 
 @keyframes animate{
     0%{background-position:0px;}
    100%{background-position:8000px;}
-}*/
+}
 

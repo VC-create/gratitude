@@ -21,9 +21,10 @@
     <hr>
   
     <header>
-      <div class="sunray">
+      <!--<div class="sunray">
+        <br>
+      </div>-->
       <div>
-        </div>
         <button onclick="toggleTheme('summer.css')">Summer</button>
         <button onclick="toggleTheme('fall.css')">Fall</button>
         <button onclick="toggleTheme('winter.css')">Winter</button>
@@ -31,14 +32,22 @@
       </div>
     </header>
 
-    
       <div class="cloud">
-      <div class = "container">
-    {% block content %}
-    <!--this is where all our code goes-->
-    <!--all the posts are loaded here, the stuff in home.html-->
-    {% endblock %}
-      </div>
+        <!--container is only used by styles.css for the basic styling. container1 does the background for summer-->
+        <!--cloud has the special effects for summer, does not include the buttons in the header-->
+        <section>
+          <!--section is for fall-->
+        <div class = "container">
+          {% block content %}
+          <!--this is where all our code goes-->
+          <!--all the posts are loaded here, the stuff in home.html-->
+          <div class="leaf1"></div>
+          <div class="leaf2"></div>
+          <div class="leaf3"></div>
+          <div class="leaf4"></div>
+          {% endblock %}
+        </div>
+      </section>
     </div>
   </div>
 

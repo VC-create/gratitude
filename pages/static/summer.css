@@ -4,6 +4,7 @@ body{
     padding: 0;
     height: 100vh;
     width: 100%;
+    color:black;
 }
 
 /*the theme switcher stuff is in the header*/
@@ -29,6 +30,7 @@ header{
 .sunray{
     background:url(https://www.pngkey.com/png/full/2-23864_transparent-sun-ray-ray-of-sunshine-png.png);
     animation: spin 3s linear infinite;
+    position:absolute;
 }
 @keyframes spin{
     from{transform:rotate(0deg);}
