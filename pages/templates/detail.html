@@ -7,20 +7,4 @@
 <h1>{{post.title}}</h1>
 <h3 class="text-secondary">{{post.date}}</h3>
 {{post.content}}
-
-<script>
-      page = document.getElementById("htmlPage");
-      checkbox = document.getElementById("checkbox");
-
-      checkbox.addEventListener("change", enableDarkMode);
-
-      function enableDarkMode(){
-          if(checkbox.checked){
-              page.setAttribute("data-bs-theme", "dark");
-          }
-          else{
-              page.setAttribute("data-bs-theme", "light");
-          }
-      }
-    </script>
 {% endblock %}
