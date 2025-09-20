@@ -35,7 +35,7 @@ header {
 
 /*in this case, the leaves will be snowflakes, since I did fall first, it's just called leaf
 might change name later*/
-.leaf1, .leaf2, .leaf3, .leaf4, .leaf5, .leaf6 {
+.leaf1, .leaf2, .leaf3, .leaf4{
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
@@ -80,24 +80,6 @@ might change name later*/
     height: 100px;
     background-image: url(https://cdn.creazilla.com/cliparts/70043/snowflake-clipart-original.png);
     animation: animateLeaf4 12s linear infinite;
-}
-
-.leaf5 {
-    top: 40%;
-    left: 40%;
-    width: 100px;
-    height: 100px;
-    background-image: url(https://png.pngtree.com/png-vector/20230915/ourmid/pngtree-illustration-of-3d-snowflake-png-image_10076165.png);
-    animation: animateLeaf5 12s linear infinite;
-}
-
-.leaf6 {
-    top: 50%;
-    left: 50%;
-    width: 100px;
-    height: 100px;
-    background-image: url(https://png.pngtree.com/png-clipart/20250103/original/pngtree-blue-snowflake-clipart-illustration-winter-element-png-image_19713260.png);
-    animation: animateLeaf6 12s linear infinite;
 }
 
 
@@ -148,32 +130,6 @@ might change name later*/
         opacity: 1;
         top: 110%;
         transform: translateX(-50px) rotate(180deg);
-    }
-}
-
-@keyframes animateLeaf5 {
-    0% {
-        opacity: 0.2;
-        top: -10%;
-        transform: translateX(60px) rotate(0deg);
-    }
-    100% {
-        opacity: 1;
-        top: 110%;
-        transform: translateX(-60px) rotate(180deg);
-    }
-}
-
-@keyframes animateLeaf6 {
-    0% {
-        opacity: 0.2;
-        top: -10%;
-        transform: translateX(70px) rotate(0deg);
-    }
-    100% {
-        opacity: 1;
-        top: 110%;
-        transform: translateX(-70px) rotate(180deg);
     }
 }
 
