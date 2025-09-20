@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after
+{
+  margin: 0;
+  padding: 0;
+}
+
 body {
     font-family: monaco;
     margin: 0;
@@ -12,10 +20,11 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url(https://img2.wallspic.com/previews/0/0/0/0/4/140000/140000-grass_family-cover_art-grass-plant-spring-x750.jpg);
+    background: url(https://fox56news.com/wp-content/uploads/sites/24/2022/03/GettyImages-1130636356.jpg);
     background-size: 100% 100%;
     overflow: hidden;
     z-index: 1; 
+    
 }
 
 header {
@@ -25,127 +34,94 @@ header {
 }
 
 .cloud {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    z-index:1;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content: center;
 }
 
-/*the leaf animations are on top of the background, z index 2 - higher index = on top of lower index
-the absolute position makes them posiiton relative to their closest ancestor, the cloud, ensuring they can move freely in it
-it takes them out of the regular document flow so it doesn't affect the layout of other elements
-the background size contain makes them fit the whole div without distortion
-no repeat makes sures the image only appears once and not many times if it doesn't fit the div
-the centering places the image of the leaf in the middle of the div - not really needed?*/
-.leaf1, .leaf2, .leaf3, .leaf4 {
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 2;  
+.bird{
+    background-image:url(https://png.pngtree.com/png-vector/20240715/ourmid/pngtree-there-is-a-white-bird-flying-with-its-wings-spread-generative-png-image_13095618.png);
+    background-size:cover;
+    width:100px;
+    height:100px;
+    animation:flap 0.5s ease-in-out infinite;
+}
+
+.bird1{
+    animation-duration:1s;
+    animation-delay:-0.5s;
+}
+.bird2{
+    animation-duration:0.9s;
+    animation-delay:-0.75s;
+}
+.bird3{
+    animation-duration:1.25s;
+    animation-delay:-0.25s;
+}
+.bird4{
+    animation-duration:1.1s;
+    animation-delay:-0.5s;
+}
+
+.leaf{
+    position:absolute;
+    top:20%;
+    left:-10%;
+    transform:scale(0) transformX(-10vw);
+    will-change:transform;
+    animation:fly-right linear infinite;
+}
+
+.leaf1{
+    animation-duration:15s;
+    animation-delay:0;
+}
+.leaf2{
+    animation-duration:16s;
+    animation-delay:1;
+}
+.leaf3{
+    animation-duration:14.6s;
+    animation-delay:9.5;
+}
+.leaf4{
+    animation-duration:16s;
+    animation-delay:10.25;
 }
 
 
-.leaf1 {
-    top: 10%;
-    left: 20%;
-    width: 100px;
-    height: 100px;
-    background-image: url(https://www.pngkey.com/png/full/930-9306416_autumn-leaves-clipart-chinar-autumn-maple-leaf-png.png);
-    animation: animateLeaf1 10s linear infinite;
-}
-
-/* Leaf 2 */
-.leaf2 {
-    top: 30%;
-    left: 50%;
-    width: 100px;
-    height: 100px;
-    background-image: url(https://assets.simpleviewinc.com/simpleview/image/upload/c_mpad,q_75,w_297/v1/clients/newyorkstate/hornbeam_da192ef6-6ce2-428f-88ae-30afc9cccdeb.png);
-    animation: animateLeaf2 20s linear infinite;
-}
-
-/* Leaf 3 */
-.leaf3 {
-    top: 50%;
-    left: 70%;
-    width: 120px;
-    height: 120px;
-    background-image: url(https://png.pngtree.com/png-clipart/20210905/original/pngtree-autumn-falling-leaves-fall-png-image_6695950.jpg);
-    animation: animateLeaf3 18s linear infinite;
-}
-
-/* Leaf 4 */
-.leaf4 {
-    top: 20%;
-    left: 0%;
-    width: 100px;
-    height: 100px;
-    background-image: url(https://dejpknyizje2n.cloudfront.net/media/carstickers/versions/fall-leaves-autumn-season-watercolor-illustration-sticker-u1e1f-x450.png);
-    animation: animateLeaf4 7s linear infinite;
-}
-
-/* each leaf animated seperately, opacity from 0 to 1(fully visible)*/
-/*animating each leaf separetely doesn't affect the background and the blog posts which are in container1 and container respecitively*/
-@keyframes animateLeaf1 {
-    0% {
-        opacity: 0.3;
-        top: -10%;
-        transform: translateX(20px) rotate(0deg);
+@keyframes fly-right{
+    0%{
+        transform:scale(0.3) translateX(-10vw);
     }
-    100% {
-        opacity: 1;
-        top: 110%;
-        transform: translateX(-20px) rotate(180deg);
+    10%{
+        transform:translateY(2vh) translateX(10vw) scale(0.4);
     }
-}
-
-@keyframes animateLeaf2 {
-    0% {
-        opacity: 0.3;
-        top: -10%;
-        transform: translateX(30px) rotate(0deg);
+    20%{
+        transform:translateY(0vh) translateX(30vw) scale(0.5);
     }
-    100% {
-        opacity: 1;
-        top: 110%;
-        transform: translateX(-30px) rotate(180deg);
+    30%{
+        transform:translateY(4vh) translateX(50vw) scale(0.6);
     }
-}
-
-@keyframes animateLeaf3 {
-    0% {
-        opacity: 0.3;
-        top: -10%;
-        transform: translateX(40px) rotate(0deg);
+    40%{
+        transform:translateY(2vh) translateX(70vw) scale(0.6);
     }
-    100% {
-        opacity: 1;
-        top: 110%;
-        transform: translateX(-40px) rotate(180deg);
+    50%{
+        transform:translateY(0vh) translateX(90vw) scale(0.6);
+    }
+    60%{
+        transform:translateY(0vh) translateX(110vw) scale(0.6);
+    }
+    100%{
+        transform:translateY(0vh) translateX(110vw) scale(0.6);
     }
 }
 
-@keyframes animateLeaf4 {
-    0% {
-        opacity: 0.3;
-        top: -10%;
-        transform: translateX(50px) rotate(0deg);
-    }
-    100% {
-        opacity: 1;
-        top: 110%;
-        transform: translateX(-50px) rotate(180deg);
-    }
-}
-
-/*blog content above leaves, z index 3*/
-.container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: auto;
-    z-index: 3; 
-    /*overflow: auto;*/
+@keyframes flap {
+    0%, 100% { transform: scaleY(1) }
+    50% { transform: scaleY(0.8) } /* squish vertically to mimic flap */
 }
