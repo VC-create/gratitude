@@ -115,3 +115,11 @@ header h4 {
         transform: scaleY(0.7) 
     } 
 }
+
+
+.blog-content{
+    background-color: white;
+    padding:10px;
+    border:black 1px solid;
+    z-index:2;
+}
