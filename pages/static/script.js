@@ -3,5 +3,8 @@ function toggleTheme(theme) {
     let themeLink = document.getElementById('theme');
     //update the link to the stylesheet by having the href link go into the static folder and then find the theme
     //the theme is passed when we call the function in base.html
-    themeLink.href = "/static/" + theme
+    themeLink.href = "/static/" + theme;
+
+    let musiclink = document.getElementById('music');
+    musiclink.href = "/static/audios" + theme;
 }

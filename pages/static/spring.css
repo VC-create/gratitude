@@ -22,6 +22,7 @@ header {
     text-align: center;
     font-size: 30px;
     padding:20px;
+    z-index:3;
 }
 
 /*use the bird to stlye all birds from base.html*/
