@@ -46,7 +46,7 @@ header{
     /*image for free from yopriceville gallery*/
     background:url(https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Cloud-PNG/Fluffy_Cloud_Large_Transparent_Image.png?m=1629830703);
     animation:animate 120s linear infinite;
-    background-size: 100% auto;
+    background-size: cover;
 }
 
 @keyframes animate{

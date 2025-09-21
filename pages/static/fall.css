@@ -19,8 +19,7 @@ header {
     position: absolute;
     width: 100%;
     height: 100%;
-    background:url(https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?cs=srgb&dl=pexels-pixabay-33109.jpg&fm=jpg);
-    /*background: url(https://media.istockphoto.com/id/1616269561/vector/autumn-leaf-background.jpg?s=612x612&w=0&k=20&c=lJWl6QxCcKvyNmrjVcp7GWelM7m4QnI2J5mTrnyG2Yg=);*/
+    background: url(https://media.istockphoto.com/id/1616269561/vector/autumn-leaf-background.jpg?s=612x612&w=0&k=20&c=lJWl6QxCcKvyNmrjVcp7GWelM7m4QnI2J5mTrnyG2Yg=);
     background-size: 100% 100%;
     overflow: hidden;
     z-index: 1; 
@@ -53,36 +52,35 @@ the centering places the image of the leaf in the middle of the div - not really
 .leaf1 {
     top: 10%;
     left: 20%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background-image: url(https://www.pngkey.com/png/full/930-9306416_autumn-leaves-clipart-chinar-autumn-maple-leaf-png.png);
-    animation: animateLeaf1 10s linear infinite;
+    animation: animateLeaf1 18s linear infinite;
 }
 
-/* Leaf 2 */
 .leaf2 {
     top: 30%;
     left: 50%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background-image: url(https://assets.simpleviewinc.com/simpleview/image/upload/c_mpad,q_75,w_297/v1/clients/newyorkstate/hornbeam_da192ef6-6ce2-428f-88ae-30afc9cccdeb.png);
-    animation: animateLeaf2 20s linear infinite;
+    animation: animateLeaf2 12s linear infinite;
 }
 
-/* Leaf 3 */
+
 .leaf3 {
     top: 50%;
     left: 70%;
     width: 120px;
     height: 120px;
     background-image: url(https://png.pngtree.com/png-clipart/20210905/original/pngtree-autumn-falling-leaves-fall-png-image_6695950.jpg);
-    animation: animateLeaf3 18s linear infinite;
+    animation: animateLeaf3 15s linear infinite;
 }
 
-/* Leaf 4 */
+
 .leaf4 {
     top: 20%;
-    left: 0%;
+    left: 90%;
     width: 100px;
     height: 100px;
     background-image: url(https://dejpknyizje2n.cloudfront.net/media/carstickers/versions/fall-leaves-autumn-season-watercolor-illustration-sticker-u1e1f-x450.png);
@@ -93,7 +91,7 @@ the centering places the image of the leaf in the middle of the div - not really
 /*animating each leaf separetely doesn't affect the background and the blog posts which are in container1 and container respecitively*/
 @keyframes animateLeaf1 {
     0% {
-        opacity: 0.3;
+        opacity: 0.7;
         top: -10%;
         transform: translateX(20px) rotate(0deg);
     }
@@ -106,7 +104,7 @@ the centering places the image of the leaf in the middle of the div - not really
 
 @keyframes animateLeaf2 {
     0% {
-        opacity: 0.3;
+        opacity: 0.7;
         top: -10%;
         transform: translateX(30px) rotate(0deg);
     }
@@ -119,7 +117,7 @@ the centering places the image of the leaf in the middle of the div - not really
 
 @keyframes animateLeaf3 {
     0% {
-        opacity: 0.3;
+        opacity: 0.7;
         top: -10%;
         transform: translateX(40px) rotate(0deg);
     }
@@ -132,7 +130,7 @@ the centering places the image of the leaf in the middle of the div - not really
 
 @keyframes animateLeaf4 {
     0% {
-        opacity: 0.3;
+        opacity: 0.7;
         top: -10%;
         transform: translateX(50px) rotate(0deg);
     }
@@ -152,5 +150,4 @@ the centering places the image of the leaf in the middle of the div - not really
     height: 100%;
     pointer-events: auto;
     z-index: 3; 
-    /*overflow: auto;*/
 }
