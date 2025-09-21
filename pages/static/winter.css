@@ -19,7 +19,6 @@ header {
     width: 100%;
     height: 100%;
     background:url(https://media.istockphoto.com/id/1066960598/photo/winter-holiday-background-with-snow-copy-space.jpg?s=612x612&w=0&k=20&c=KjOIp2ns1988noHZXBT8DbS3fOlhd_GXSHsoO7vtAeE=);
-    /*background: url(https://img.freepik.com/free-vector/unfocussed-winter-background-with-snowflakes_1393-271.jpg?semt=ais_incoming&w=740&q=80);*/
     background-size: 100% 100%;
     overflow: hidden;
     z-index: 1; 
@@ -46,57 +45,59 @@ might change name later*/
 .leaf1 {
     top: 10%;
     left: 20%;
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
     background-image: url(https://png.pngtree.com/png-vector/20230831/ourmid/pngtree-3d-rendering-snowflake-isolated-png-image_9192400.png);
-    animation: animateLeaf1 15s linear infinite;
+    animation: animateSnowflake1 10s linear infinite;
 }
 
 /* Leaf 2 */
 .leaf2 {
     top: 30%;
-    left: 30%;
-    width: 100px;
-    height: 100px;
+    left: 40%;
+    width: 140px;
+    height: 140px;
     background-image: url(https://png.pngtree.com/png-vector/20230915/ourmid/pngtree-illustration-of-3d-snowflake-png-image_10076165.png);
-    animation: animateLeaf2 20s linear infinite;
+    animation: animateSnowflake2 18s linear infinite;
 }
 
 /* Leaf 3 */
 .leaf3 {
     top: 50%;
     left: 70%;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     background-image: url(https://png.pngtree.com/png-clipart/20250103/original/pngtree-blue-snowflake-clipart-illustration-winter-element-png-image_19713260.png);
-    animation: animateLeaf3 18s linear infinite;
+    animation: animateSnowflake3 15s linear infinite;
 }
 
 /* Leaf 4 */
 .leaf4 {
     top: 20%;
-    left: 0%;
-    width: 100px;
-    height: 100px;
+    left: 90%;
+    width: 150px;
+    height: 150px;
     background-image: url(https://cdn.creazilla.com/cliparts/70043/snowflake-clipart-original.png);
-    animation: animateLeaf4 12s linear infinite;
+    animation: animateSnowflake4 12s linear infinite;
 }
 
 
-@keyframes animateLeaf1 {
+@keyframes animateSnowflake1 {
     0% {
+        opacity:0.7;
         top: -10%;
         transform: translateX(20px) rotate(0deg);
     }
     100% {
+        opacity:1;
         top: 110%;
         transform: translateX(-20px) rotate(180deg);
     }
 }
 
-@keyframes animateLeaf2 {
+@keyframes animateSnowflake2 {
     0% {
-        opacity: 0.2;
+        opacity: 0.7;
         top: -10%;
         transform: translateX(30px) rotate(0deg);
     }
@@ -107,9 +108,9 @@ might change name later*/
     }
 }
 
-@keyframes animateLeaf3 {
+@keyframes animateSnowflake3 {
     0% {
-        opacity: 0.2;
+        opacity: 0.7;
         top: -10%;
         transform: translateX(40px) rotate(0deg);
     }
@@ -120,9 +121,9 @@ might change name later*/
     }
 }
 
-@keyframes animateLeaf4 {
+@keyframes animateSnowflake4 {
     0% {
-        opacity: 0.2;
+        opacity: 0.7;
         top: -10%;
         transform: translateX(50px) rotate(0deg);
     }
@@ -133,7 +134,7 @@ might change name later*/
     }
 }
 
-/*blog content above leaves, z index 3*/
+/*blog content above snowflakes and make it interactive, z index 3*/
 .container {
     position: absolute;
     top: 0;
@@ -142,5 +143,4 @@ might change name later*/
     height: 100%;
     pointer-events: auto;
     z-index: 3; 
-    /*overflow: auto;*/
 }
