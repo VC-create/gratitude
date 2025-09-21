@@ -1,10 +1,18 @@
-body{
-    font-family:monaco;
+body {
+    font-family: monaco;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    color: black;
 }
 
-/*the theme switcher stuff is in the header*/
-header{
-    text-align:center;
-    font-size:30px;
+header {
+    text-align: center;
+    font-size: 25px;
     padding:10px;
 }
+header h4 {
+    margin-top: 10px;
+}
+

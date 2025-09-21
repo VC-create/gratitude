@@ -4,7 +4,21 @@
 
 {% block content %}
 
-<h1>{{post.title}}</h1>
-<h3 class="text-secondary">{{post.date}}</h3>
+<h1><u>{{post.title}}</u></h1>
+<h3 class="text-secondary"><em>{{post.date}}</em></h3>
 {{post.content}}
+{% endblock %}
+
+
+{% block extra_styles %}
+    <style>
+        h1 {
+            color: #003366;
+            text-decoration: underline;
+        }
+        .text-secondary {
+            font-style: italic;
+            color: rgb(58, 142, 232);
+        }
+    </style>
 {% endblock %}
