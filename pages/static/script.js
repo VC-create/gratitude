@@ -6,17 +6,23 @@ function toggleTheme(theme) {
     themeLink.href = "/static/" + theme;
 
     let musicLink = document.getElementById('music');
+    let description = document.getElementById("seasonMusic");
 
     if (theme == 'summer.css') {
         musicLink.src = "/static/audios/summer.mp3";
+        description.innerHTML = "Vivaldi:Summer";
     } else if (theme == 'winter.css') {
         musicLink.src = "/static/audios/winter.mp3";
+        description.innerHTML = "Vivaldi:Winter";
     } else if (theme =="fall.css") {
         musicLink.src = "/static/audios/fall.mp3"; 
+        description.innerHTML = "Vivaldi:Fall";
     }
-    else{
-        musicLink.src = "/satic/audios/spring.mp3";
+    else if(theme=="spring.css"){
+        musicLink.src = "/static/audios/spring.mp3";
+        description.innerHTML = "Vivaldi:Spring";
     }
+
 
 
     let audioLink = document.getElementById("audio");

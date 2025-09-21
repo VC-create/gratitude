@@ -9,8 +9,11 @@ body {
 
 header {
     text-align: center;
-    font-size: 30px;
-    padding:20px;
+    font-size: 25px;
+    padding:10px;
+}
+header h4 {
+    margin-top: 10px;
 }
 
 /*the z-index just places it at the very bottom so it'll be under the leaves, otherwise everything is the same as summer*/

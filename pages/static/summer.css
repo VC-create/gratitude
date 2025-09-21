@@ -8,10 +8,13 @@ body{
 }
 
 /*the theme switcher stuff is in the header*/
-header{
-    text-align:center;
-    font-size:30px;
-    padding:20px;
+header {
+    text-align: center;
+    font-size: 25px;
+    padding:10px;
+}
+header h4 {
+    margin-top: 10px;
 }
 
 .container1{

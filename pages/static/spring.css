@@ -20,9 +20,11 @@ body {
 
 header {
     text-align: center;
-    font-size: 30px;
-    padding:20px;
-    z-index:3;
+    font-size: 25px;
+    padding:10px;
+}
+header h4 {
+    margin-top: 10px;
 }
 
 /*use the bird to stlye all birds from base.html*/
