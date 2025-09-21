@@ -24,37 +24,36 @@ header {
     padding:20px;
 }
 
-/*.cloud {
-    z-index:1;
-    overflow:hidden;
-    display:flex;
-}*/
-
+/*use the bird to stlye all birds from base.html*/
+/*flap animation makes it look like their wings are moving*/
 .bird{
     background-image:url(https://png.pngtree.com/png-vector/20240715/ourmid/pngtree-there-is-a-white-bird-flying-with-its-wings-spread-generative-png-image_13095618.png);
     background-size:cover;
-    width:250px;
-    height:250px;
+    width:200px;
+    height:200px;
     animation:flap 0.5s ease-in-out infinite;
 }
 
+/*add specifics using the specific bird from base.html so that the bird aren't moving in sync - looks more natural*/
+/*the flap animation is different durations and delays for each of them*/
 .bird1{
-    animation-duration:1s;
+    animation-duration:2s;
     animation-delay:-0.5s;
 }
 .bird2{
-    animation-duration:0.9s;
-    animation-delay:-0.75s;
+    animation-duration:3s;
+    animation-delay:-1s;
 }
 .bird3{
-    animation-duration:1.25s;
-    animation-delay:-0.25s;
+    animation-duration:2.5s;
+    animation-delay:0.5s;
 }
 .bird4{
-    animation-duration:1.1s;
-    animation-delay:-0.5s;
+    animation-duration:3.5s;
+    animation-delay:1s;
 }
 
+/*fly-right makes all the birds fly right*/
 .leaf{
     position:absolute;
     top:20%;
@@ -63,52 +62,53 @@ header {
     animation:fly-right linear infinite;
 }
 
+/*the fly right has different durations and times for all of them*/
 .leaf1{
-    animation-duration:15s;
-    animation-delay:0;
+    animation-duration:12s;
 }
 .leaf2{
-    animation-duration:16s;
-    animation-delay:1;
+    animation-duration:20s;
 }
 .leaf3{
-    animation-duration:14.6s;
-    animation-delay:9.5;
+    animation-duration:15s;
 }
 .leaf4{
-    animation-duration:16s;
-    animation-delay:10.25;
+    animation-duration:25s;
 }
 
 
 @keyframes fly-right{
     0%{
-        transform:scale(0.3) translateX(-10vw);
+        transform:translateX(-10vw);
     }
     10%{
-        transform:translateY(2vh) translateX(10vw) scale(0.4);
+        transform:translateY(2vh) translateX(10vw);
     }
     20%{
-        transform:translateY(0vh) translateX(30vw) scale(0.5);
+        transform:translateY(0vh) translateX(30vw);
     }
     30%{
-        transform:translateY(4vh) translateX(50vw) scale(0.6);
+        transform:translateY(-2vh) translateX(50vw);
     }
     40%{
-        transform:translateY(2vh) translateX(70vw) scale(0.6);
+        transform:translateY(2vh) translateX(70vw);
     }
     50%{
-        transform:translateY(0vh) translateX(90vw) scale(0.6);
+        transform:translateY(4vh) translateX(90vw);
     }
     60%{
-        transform:translateY(0vh) translateX(110vw) scale(0.6);
+        transform:translateY(-6vh) translateX(110vw);
     }
     100%{
-        transform:translateY(0vh) translateX(110vw) scale(0.6);
+        transform:translateY(0vh) translateX(110vw);
     }
 }
 
 @keyframes flap {
-    0%, 100% { transform: scaleY(1) }
-    50% { transform: scaleY(0.7) } 
+    0%, 100% { 
+        transform: scaleY(1) 
+    }
+    50% { 
+        transform: scaleY(0.7) 
+    } 
 }
