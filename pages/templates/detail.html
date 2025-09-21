@@ -2,23 +2,30 @@
 <!--it displays the blog post, unique for each!-->
 {% extends 'base.html' %}
 
-{% block content %}
+<div class="blog-content">{% block content %}
 
 <h1><u>{{post.title}}</u></h1>
-<h3 class="text-secondary"><em>{{post.date}}</em></h3>
+<h3><em>{{post.date}}</em></h3>
 {{post.content}}
 {% endblock %}
+</div>
 
 
 {% block extra_styles %}
     <style>
+        body{
+            background-color:bisque;
+        }
         h1 {
             color: #003366;
             text-decoration: underline;
         }
-        .text-secondary {
+        h3{
             font-style: italic;
             color: rgb(58, 142, 232);
+        }
+        .blog-content{
+            background-color: white;
         }
     </style>
 {% endblock %}
