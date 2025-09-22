@@ -26,20 +26,7 @@ header h4 {
     background-size: 100% 100%;
     /*overflow hidden prevents scrolling so image covers whole page*/
     overflow:hidden;
-    /*use this for the sun rays from png key for free - 
-    https://www.pngkey.com/png/full/2-23864_transparent-sun-ray-ray-of-sunshine-png.png*/
-    /*can do same animation thing like maybe move the rays side to side, or try to make it move at an angle*/
 }
-
-/*.sunray{
-    background:url(https://www.pngkey.com/png/full/2-23864_transparent-sun-ray-ray-of-sunshine-png.png);
-    animation: spin 3s linear infinite;
-    position:absolute;
-}
-@keyframes spin{
-    from{transform:rotate(0deg);}
-    to{transform:rotate(360deg);}
-}*/
 
 
 .cloud{
@@ -61,8 +48,9 @@ header h4 {
 .blog-content{
     background-color: white;
     padding:10px;
-    border:black 1px solid;
+    border:rgb(214, 208, 208) 1px solid;
     z-index:999;
+    border-radius:15px;
 }
 
 h1 {

@@ -11,10 +11,29 @@ body {
 header {
     text-align: center;
     font-size: 25px;
-    padding:10px;
+    padding:5x;
 }
 header h4 {
     margin-top: 10px;
+}
+
+/*for detail.html*/
+.blog-content{
+    background-color: white;
+    padding:10px;
+    border:rgb(214, 208, 208) 1px solid;
+    z-index:999;
+    border-radius:15px;
+}
+
+h1 {
+    color: #003366;
+    text-decoration: underline;
+}
+
+h3{
+    font-style: italic;
+    color: rgb(58, 142, 232);
 }
 
 

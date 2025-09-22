@@ -120,8 +120,9 @@ header h4 {
 .blog-content{
     background-color: white;
     padding:10px;
-    border:black 1px solid;
+    border:rgb(214, 208, 208) 1px solid;
     z-index:999;
+    border-radius:15px;
 }
 
 h1 {
