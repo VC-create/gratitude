@@ -56,3 +56,21 @@ header h4 {
     0%{background-position:0px;}
    100%{background-position:8000px;}
 }
+
+/*for the detail.html page*/
+.blog-content{
+    background-color: white;
+    padding:10px;
+    border:black 1px solid;
+    z-index:999;
+}
+
+h1 {
+    color: #003366;
+    text-decoration: underline;
+}
+
+h3{
+    font-style: italic;
+    color: rgb(58, 142, 232);
+}

@@ -121,6 +121,7 @@ header h4 {
     background-color: white;
     padding:10px;
     border:black 1px solid;
+    z-index:999;
 }
 
 h1 {
